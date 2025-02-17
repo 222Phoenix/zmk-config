@@ -1,0 +1,6 @@
+if SHIELD_TRACKPOINT
+
+config ZMK_KEYBOARD_NAME
+     default "trackpoint"
+
+endif
