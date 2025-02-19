@@ -28,10 +28,8 @@ compatible = "zmk,combos";
     layers = <LAYERS>; \
   };
 
-COMBO(left_parenthesis, &kp LEFT_PARENTHESIS, 1 2, base)
-COMBO(right_parenthesis, &kp RIGHT_PARENTHESIS, 2 3, base)
-COMBO(parentheses, &macro_parentheses, 1 2 3, base)
-COMBO(left_bracket, &kp LEFT_BRACKET, 11 12, base)
+COMBO(left_parenthesis, &kp PG_UP, 1 2, base)
+COMBO(right_parenthesis, &kp PG_DN, 2 3, base)
 
 
 
