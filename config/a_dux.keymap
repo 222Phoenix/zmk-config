@@ -39,18 +39,6 @@
         };
 
     };
-
-
-
-//    keymap {
-//        compatible = "zmk,keymap";
-
-//        default_layer {
-//            bindings = <
-//                &td0
-//            >;
-//        };
-//    };
 };
 
 //combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos 
