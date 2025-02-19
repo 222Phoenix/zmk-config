@@ -10,6 +10,29 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
+/*                KEY POSITIONS
+
+  ╭────────────────────╮ ╭────────────────────╮
+  │  0   1   2   3   4 │ │  5   6   7   8   9 │
+  │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
+  │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
+  ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
+              ╰────────╯ ╰────────╯            */
+
+compatible = "zmk,combos";
+
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+  combo_##NAME { \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <LAYERS>; \
+  };
+
+COMBO(left_parenthesis, &kp LEFT_PARENTHESIS, 1 2, base)
+COMBO(right_parenthesis, &kp RIGHT_PARENTHESIS, 2 3, base)
+COMBO(parentheses, &macro_parentheses, 1 2 3, base)
+COMBO(left_bracket, &kp LEFT_BRACKET, 11 12, base)
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -27,7 +50,7 @@
         compatible = "zmk,keymap";
 
         // This is a sample keymap intended to be replaced with your own
-        base_layer {
+        base {
             bindings = <
                 &kp Q        &kp LS(COMMA)    &kp E      &kp LS(DOT)   &kp BSPC                                          &kp Y     &kp U     &kp I     &kp O     &kp P
                 &kp A        &kp S            &kp D      &kp F         &kp PSCRN                                         &kp H     &kp J     &kp K     &kp L     &kp SEMI
