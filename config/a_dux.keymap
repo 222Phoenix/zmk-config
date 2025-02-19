@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
@@ -43,15 +42,15 @@
 
 
 
-    keymap {
-        compatible = "zmk,keymap";
+//    keymap {
+//        compatible = "zmk,keymap";
 
-        default_layer {
-            bindings = <
-                &td0
-            >;
-        };
-    };
+//        default_layer {
+//            bindings = <
+//                &td0
+//            >;
+//        };
+//    };
 };
 
 //combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos 
@@ -88,8 +87,6 @@
 
     keymap {
         compatible = "zmk,keymap";
-
-        // This is a sample keymap intended to be replaced with your own
         base_layer {
             bindings = <
                 &kp Z        &td0             &kp E      &td1          &kp BSPC                                          &kp Y     &kp U     &kp I     &kp O     &kp P
