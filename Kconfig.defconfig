@@ -9,6 +9,9 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_MOUSE
+    default y
+
 endif
 
 if SHIELD_A_DUX_LEFT || SHIELD_A_DUX_RIGHT
