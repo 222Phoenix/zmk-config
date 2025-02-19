@@ -19,17 +19,16 @@
   ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
               ╰────────╯ ╰────────╯            */
 
-compatible = "zmk,combos";
-
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
-  combo_##NAME { \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
-    layers = <LAYERS>; \
-  };
-
-COMBO(left_parenthesis, &kp PG_UP, 1 2, base)
-COMBO(right_parenthesis, &kp PG_DN, 2 3, base)
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+    };
+};
 
 
 
