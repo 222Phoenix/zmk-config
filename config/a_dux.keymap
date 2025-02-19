@@ -10,6 +10,8 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
+//tap dance tap dance tap dance tap dance ctap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance 
+
 / {
     behaviors {
         td0: tap_dance_0 {
@@ -18,7 +20,28 @@
             tapping-term-ms = <200>;
             bindings = <&kp LS(COMMA)>, <&kp LC(LS(TAB))>;
         };
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(DOT)>, <&kp LC(W)>;
+        };
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp MCLK>, <&kp LC(TAB)>;
+        };
+        td3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp RCLK>, <&kp LC(LS(T))>;
+        };
+
     };
+
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -30,6 +53,8 @@
         };
     };
 };
+
+//combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos 
 
 / {
     combos {
