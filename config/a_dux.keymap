@@ -33,18 +33,7 @@ COMBO(right_parenthesis, &kp RIGHT_PARENTHESIS, 2 3, base)
 COMBO(parentheses, &macro_parentheses, 1 2 3, base)
 COMBO(left_bracket, &kp LEFT_BRACKET, 11 12, base)
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp PG_UP>;
-        };
-    };
-};
 
-/ {
 
     keymap {
         compatible = "zmk,keymap";
