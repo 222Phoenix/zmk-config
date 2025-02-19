@@ -14,29 +14,29 @@
 
 / {
     behaviors {
-        td0: tap_dance_0 {
+        td0: tap_dance_0 {                                 //left tab
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LS(COMMA)>, <&kp LC(LS(TAB))>;
         };
-        td1: tap_dance_1 {
+        td1: tap_dance_1 {                                 //right tab
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LS(DOT)>, <&kp LC(W)>;
+            bindings = <&kp LS(DOT)>, <&kp LC(TAB)>;
         };
-        td2: tap_dance_2 {
+        td2: tap_dance_2 {                                 //mclick
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mkp MCLK>, <&kp LC(TAB)>;
+            bindings = <&mkp MCLK>, <&kp LC(LS(T))>;
         };
-        td3: tap_dance_3 {
+        td3: tap_dance_3 {                                 //rclick
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mkp RCLK>, <&kp LC(LS(T))>;
+            bindings = <&mkp RCLK>, <&kp LC(W)>;
         };
 
     };
@@ -92,10 +92,10 @@
         // This is a sample keymap intended to be replaced with your own
         base_layer {
             bindings = <
-                &td0      &kp LS(COMMA)    &kp E      &kp LS(DOT)   &kp BSPC                                          &kp Y     &kp U     &kp I     &kp O     &kp P
+                &kp Z        &td0             &kp E      &td1          &kp BSPC                                          &kp Y     &kp U     &kp I     &kp O     &kp P
                 &kp A        &kp S            &kp D      &kp F         &kp PSCRN                                         &kp H     &kp J     &kp K     &kp L     &kp SEMI
                 &kp LEFT     &kp DOWN         &kp UP     &kp RIGHT     &kp B                                             &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH
-    &mkp LCLK   &mkp MCLK                                                                                      &kp SPACE &kp ENTER
+    &mkp LCLK   &td2                                                                                      &kp SPACE &kp ENTER
             >;
         };
 
