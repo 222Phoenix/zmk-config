@@ -16,9 +16,9 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <0 1>;
-            bindings = <&kp ESC>;
+            bindings = <&kp PG_UP>;
         };
     };
 };
@@ -29,7 +29,7 @@
         compatible = "zmk,keymap";
 
         // This is a sample keymap intended to be replaced with your own
-        base {
+        base_layer {
             bindings = <
                 &kp Q        &kp LS(COMMA)    &kp E      &kp LS(DOT)   &kp BSPC                                          &kp Y     &kp U     &kp I     &kp O     &kp P
                 &kp A        &kp S            &kp D      &kp F         &kp PSCRN                                         &kp H     &kp J     &kp K     &kp L     &kp SEMI
