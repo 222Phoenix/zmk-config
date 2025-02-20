@@ -42,7 +42,8 @@
     };
 };
 
-//combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos 
+//macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros 
+
 / {
 macros {
     macro_name: macro_name {
@@ -55,9 +56,22 @@ macros {
             , <&macro_release &kp LSHFT>
             ;
     };
+
+db: double-bracket {
+    compatible = "zmk,behavior-hold-tap";
+    label = "DOUBLE_BRACKET";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <300>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+    bindings = <&kp>, <&dbl_brkt_open>;
+};
+
 };
 };
 
+//combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos 
 
 / {
     combos {
@@ -87,13 +101,14 @@ macros {
     };
 };
 
-/ {
+//keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap 
 
+/ {
     keymap {
         compatible = "zmk,keymap";
         base_layer {
             bindings = <
-                &kp Z        &td0             &kp E      &td1          &kp BSPC                                          &kp Y     &kp U     &kp I     &kp O     &kp P
+                &kp Z        &td0             &db 0 LC(C)      &td1          &kp BSPC                                          &kp Y     &kp U     &kp I     &kp O     &kp P
                 &kp A        &kp S            &kp D      &kp F         &kp PSCRN                                         &kp H     &kp J     &kp K     &kp L     &kp SEMI
                 &kp LEFT     &kp DOWN         &kp UP     &kp RIGHT     &kp B                                             &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH
     &mkp LCLK   &td2                                                                                      &kp SPACE &kp ENTER
