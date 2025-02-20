@@ -57,15 +57,15 @@ macros {
             ;
     };
 
-db: double-bracket {
-    compatible = "zmk,behavior-hold-tap";
-    label = "DOUBLE_BRACKET";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <300>;
-    quick-tap-ms = <125>;
-    global-quick-tap;
-    bindings = <&kp>, <&dbl_brkt_open>;
+dbl_brkt_open: dbl_brkt_open {
+    label = "dbl_brkt_open";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <0>;
+    bindings
+        = <&macro_press &kp LBKT &kp LBKT>
+        , <&macro_pause_for_release>
+        , <&macro_release &kp LBKT &kp LBKT>;
 };
 
 };
