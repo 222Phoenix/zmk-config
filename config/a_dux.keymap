@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
-
 //tap dance tap dance tap dance tap dance ctap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance 
 
 / {
@@ -66,11 +65,11 @@ dbl_brkt_open: dbl_brkt_open {
         = <&macro_press &kp LBKT &kp LBKT>
         , <&macro_pause_for_release>
         , <&macro_release &kp LBKT &kp LBKT>;
-};
+     };
 
 };
 };
-/ {
+
 db: double-bracket {
     compatible = "zmk,behavior-hold-tap";
     label = "DOUBLE_BRACKET";
@@ -79,9 +78,9 @@ db: double-bracket {
     tapping-term-ms = <300>;
     quick-tap-ms = <125>;
     global-quick-tap;
-    bindings = <&kp J>, <&dbl_brkt_open>;
+    bindings = <&kp>, <&dbl_brkt_open>;
 };
-};
+
 //combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos 
 
 / {
