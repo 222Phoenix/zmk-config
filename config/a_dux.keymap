@@ -38,12 +38,11 @@
             bindings = <&mkp RCLK>, <&kp LC(W)>;
         };
 
-    };
-};
+
 
 //macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros macros 
 
-/ {
+
 macros {
     macro_name: macro_name {
         label = "my_macro";
