@@ -10,18 +10,10 @@
 #include <behaviors/mouse_keys.dtsi>
 
 
-
-
-
-
-
 //tap dance tap dance tap dance tap dance ctap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance 
 
 / {
     behaviors {
-
-
-
         td0: tap_dance_0 {                                 //left tab
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -86,7 +78,7 @@
         compatible = "zmk,keymap";
         base_layer {
             bindings = <
-                my_macro        &td0             &kp E      &td1          &kp BSPC                                          &kp Y     &kp U     &kp I     &kp O     &kp P
+                &kp Z        &td0             &kp E      &td1          &kp BSPC                                          &kp Y     &kp U     &kp I     &kp O     &kp P
                 &kp A        &kp S            &kp D      &kp F         &kp PSCRN                                         &kp H     &kp J     &kp K     &kp L     &kp SEMI
                 &kp LEFT     &kp DOWN         &kp UP     &kp RIGHT     &kp B                                             &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH
     &mkp LCLK   &td2                                                                                      &kp SPACE &kp ENTER
