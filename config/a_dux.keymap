@@ -9,9 +9,10 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
+//macros macros macros macros macros macros macros macros macros vmacros macros macros cmacros macros macros macros macros macros macros macros macros 
+/ {
     macros {
         zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -21,6 +22,7 @@
                 ;
         };
     };
+};
 
 //tap dance tap dance tap dance tap dance ctap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance tap dance 
 
@@ -84,8 +86,9 @@
     };
 };
 
-/ {
+//keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap keymap 
 
+/ {
     keymap {
         compatible = "zmk,keymap";
         base_layer {
