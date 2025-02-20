@@ -70,7 +70,18 @@ dbl_brkt_open: dbl_brkt_open {
 
 };
 };
-
+/ {
+db: double-bracket {
+    compatible = "zmk,behavior-hold-tap";
+    label = "DOUBLE_BRACKET";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <300>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+    bindings = <&kp J>, <&dbl_brkt_open>;
+};
+};
 //combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos combos 
 
 / {
