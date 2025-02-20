@@ -9,13 +9,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
-// Define a macro named "my_macro" that sends "Ctrl+Shift+A" when triggered
 
-macro my_macro {
-
-  bindings = <&kp(KC_LCTRL), &kp(KC_LSHIFT), &kp(KC_A)>;
-
-}
 
 
 
@@ -25,6 +19,15 @@ macro my_macro {
 
 / {
     behaviors {
+
+// Define a macro named "my_macro" that sends "Ctrl+Shift+A" when triggered
+
+macro my_macro {
+
+  bindings = <&kp(KC_LCTRL), &kp(KC_LSHIFT), &kp(KC_A)>;
+
+}
+
         td0: tap_dance_0 {                                 //left tab
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
